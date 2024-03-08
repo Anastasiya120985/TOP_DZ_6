@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lan="en">
+  <head>
+      <meta charset="utf-8" />
+      <title>Events</title>
+  </head>
+  <body>
+      <input type="button" value="Нажмите и ответьте на вопросы">
+      <script>
+          onclick = function () {
+              var name = prompt('Введите Ваше имя');
+              alert('Привет, '+name+'!');
+              var p_year = Number(prompt('Введите год Вашего рождения'));
+              const year = new Date().getFullYear();
+              alert('Ваш возраст - '+(year-p_year));
+              var side_square = Number(prompt('Введите длину стороны квадрата'));
+              alert('Периметр квадрата - '+(side_square*4));
+              var radius = Number(prompt('Введите радиус окружности'));
+              alert('Площадь окружности - '+(Math.PI*radius**2));
+              var distance = Number(prompt('Введите расстояние между двумя городами в км'));
+              var time = Number(prompt('Введите за сколько часов Вы хотите добраться из одного города в другой'));
+              alert('Скорость, с которой Вам необходимо двигаться, чтоб успеть во время - '+(distance/time)+' км/ч');
+              const curs = 0.917;
+              var dollars = Number(prompt('Введите сумму в долларах'));
+              alert(dollars+' долларов по курсу будет '+(dollars*curs)+' евро');
+              var volume_flash = Number(prompt('Введите объем флешки в Гб'));
+              const Mb_in_GB = 1024;
+              alert('На этой флешке может поместиться '+(Math.trunc(volume_flash*Mb_in_GB/820))+' файлов размером 820 Мб');
+              var money_wallet = Number(prompt('Введите сумму денег в кошельке'));
+              var chocolate_cost = Number(prompt('Введите цену одной шоколадки'));
+              var chocolate_quantity = Math.trunc(money_wallet/chocolate_cost);
+              var change = money_wallet-chocolate_cost*chocolate_quantity;
+              alert('Вы можете купить '+chocolate_quantity+' шоколадок и у Вас останется сдача - '+change);
+              var nmbr = Number(prompt('Введите трехзначное число'));
+              var a = nmbr%10;
+              var b = (nmbr-a)/10%10;
+              var c = (nmbr-a-b*10)/100;
+              alert('Ваше число задом наперед - '+a+b+c);
+              var nbr = parseInt(prompt('Введите целое число'));
+              alert((nbr%2 ==0 ) ? 'Ваше число четное':'Ваше число нечетное');
+          }         
+      </script>
+  </body>
+</html>
